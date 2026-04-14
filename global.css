@@ -3,7 +3,9 @@
 @import "tailwindcss/utilities.css";
 
 @import "nativewind/theme";
-
+* {
+  border: 1px solid red;
+}
 @theme {
   --color-background: #fff9e3;
   --color-foreground: #081126;
