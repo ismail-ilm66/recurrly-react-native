@@ -37,6 +37,6 @@ export const icons = {
   github,
   claude,
   canva,
-} as const;
+};
 
 export type IconKey = keyof typeof icons;
