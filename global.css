@@ -8,6 +8,7 @@
 }
 @theme {
   --color-background: #fff9e3;
+  --color-red: #dc2626;
   --color-foreground: #081126;
   --color-card: #fff8e7;
   --color-muted: #f6eecf;
@@ -81,7 +82,7 @@
   }
 
   .home-add-icon {
-    @apply size-12;
+    @apply size-6;
   }
 
   .home-balance-card {
@@ -418,5 +419,17 @@
 
   .category-chip-text-active {
     @apply text-accent;
+  }
+
+  .icon-circle {
+    @apply w-10 h-10 rounded-full items-center justify-center border-2 border-gray-300;
+  }
+
+  .icon-sm {
+    @apply size-6;
+  }
+
+  .icon-md {
+    @apply size-8;
   }
 }
