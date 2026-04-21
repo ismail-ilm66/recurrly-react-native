@@ -3,7 +3,7 @@ import { formatCurrency } from "../lib/utils.js";
 
 const UpcomingSubscriptionCard = ({
   data: { id, icon, name, price, currency, daysLeft },
-}: UpcomingSubscription) => {
+}: any) => {
   return (
     <View className="upcoming-card">
       <View className="upcoming-row">
