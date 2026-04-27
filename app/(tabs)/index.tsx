@@ -4,13 +4,13 @@ import UpcomingSubscriptionCard from "@/components/UpcomingSubscriptionCard";
 import {
   HOME_BALANCE,
   HOME_SUBSCRIPTIONS,
-  HOME_USER,
   UPCOMING_SUBSCRIPTIONS,
 } from "@/constants/data";
 import { icons } from "@/constants/icons";
 import images from "@/constants/images";
 import "@/global.css";
 import { formatCurrency } from "@/lib/utils.js";
+import { useUser } from "@clerk/clerk-expo";
 import dayjs from "dayjs";
 import { styled } from "nativewind";
 import { useState } from "react";
@@ -21,7 +21,13 @@ import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
 const SafeAreaView = styled(RNSafeAreaView);
 
 export default function App() {
+  const { user } = useUser();
   const [expandedCardId, setExpandedCardId] = useState<string | null>(null);
+  const displayName = user
+    ? [user.firstName, user.lastName].filter(Boolean).join(" ") ||
+      user.primaryEmailAddress?.emailAddress?.split("@")[0] ||
+      "You"
+    : "";
   return (
     <SafeAreaView className="flex-1   bg-background p-5">
       <ListHeading title="AllSubscription"></ListHeading>
@@ -32,7 +38,7 @@ export default function App() {
             <View className="home-header">
               <View className="home-user">
                 <Image source={images.avatar} className="home-avatar"></Image>
-                <Text className="home-user-name">{HOME_USER.name}</Text>
+                <Text className="home-user-name">{displayName}</Text>
               </View>
               <View className="icon-circle">
                 <Image source={icons.add} className="home-add-icon" />

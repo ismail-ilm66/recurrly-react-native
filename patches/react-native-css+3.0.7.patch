@@ -1,0 +1,39 @@
+diff --git a/node_modules/react-native-css/dist/commonjs/components/TextInput.js b/node_modules/react-native-css/dist/commonjs/components/TextInput.js
+index 17fb786..b9dacf9 100644
+--- a/node_modules/react-native-css/dist/commonjs/components/TextInput.js
++++ b/node_modules/react-native-css/dist/commonjs/components/TextInput.js
+@@ -11,7 +11,7 @@ const mapping = {
+   className: {
+     target: "style",
+     nativeStyleMapping: {
+-      textAlign: true
++      textAlign: "textAlign"
+     }
+   }
+ };
+diff --git a/node_modules/react-native-css/dist/module/components/TextInput.js b/node_modules/react-native-css/dist/module/components/TextInput.js
+index 7b0c562..d08a2b2 100644
+--- a/node_modules/react-native-css/dist/module/components/TextInput.js
++++ b/node_modules/react-native-css/dist/module/components/TextInput.js
+@@ -7,7 +7,7 @@ const mapping = {
+   className: {
+     target: "style",
+     nativeStyleMapping: {
+-      textAlign: true
++      textAlign: "textAlign"
+     }
+   }
+ };
+diff --git a/node_modules/react-native-css/src/components/TextInput.tsx b/node_modules/react-native-css/src/components/TextInput.tsx
+index fb58a96..d49b10a 100644
+--- a/node_modules/react-native-css/src/components/TextInput.tsx
++++ b/node_modules/react-native-css/src/components/TextInput.tsx
+@@ -12,7 +12,7 @@ const mapping: StyledConfiguration<typeof RNTextInput> = {
+   className: {
+     target: "style",
+     nativeStyleMapping: {
+-      textAlign: true,
++      textAlign: "textAlign",
+     },
+   },
+ };
